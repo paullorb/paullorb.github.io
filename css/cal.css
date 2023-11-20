@@ -7,18 +7,21 @@
 html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Prevents scrollbars if the content is exactly viewport size */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 5px solid black;
+    border-radius: 25px;
 }
 
 #table-container {
-    height: 100vh; /* Full viewport height */
-    width: 100%; /* Full width */
-    overflow: auto; /* Adds scroll if the table is larger than the container */
+    height: 100%; 
+    width: 100%;
+    overflow: hidden;
 }
-/* Add this to your existing CSS file */
 
 .cell {
-    perspective: 400px;
+    perspective: 40px;
 }
 
 .info {
@@ -52,5 +55,5 @@ html, body {
 
 table tr td.cell {
     border: 1px solid #d1d1d1; /* Add border for better visualization */
-    box-shadow: inset 0 2px 20px #d1d1d1;
+    /* box-shadow: inset 0 2px 20px #d1d1d1; */
 }
