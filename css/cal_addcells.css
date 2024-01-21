@@ -1,37 +1,42 @@
 :root {
     --border: 1px solid black;
-    --box-width: 50px; 
+    --box-width: 50px;
     --box-height: 50px;
     --min-box: 30px;
+    --viewport-border: 2px solid red;
 }
 
 body {
     margin: 0;
     overflow: hidden;
+    border: var(--viewport-border);
+    box-sizing: border-box;
+    height: 100vh;
 }
 
 #buttons {
     position: fixed;
-    top: 0; /* Adjust as needed */
-    left: 0; /* Adjust as needed */
+    top: 0;
+    left: 0;
     width: 100px;
-    background-color: white; /* Or any other color */
-    }
-
-#buttons > * {
-    width: 20px;
-    z-index: 1000; /* To ensure it's above other elements */
+    background-color: white;
+    z-index: 1000;
+    height: 50px; /* Example fixed height for the buttons container */
+    box-sizing: border-box;
 }
 
 #table-container {
-    width: 100%; /* Full width */
+    border: 10px solid green;
+    width: 100%;
+    height: calc(100vh - 50px); /* Subtract the height of the buttons container */
+    overflow: auto; /* Enable scroll within the container */
 }
 
 table {
     border-collapse: collapse;
     table-layout: fixed;
     width: auto;
-    margin: auto;
+    margin: 0;
 }
 
 td {
